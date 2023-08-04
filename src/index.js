@@ -10,6 +10,7 @@ import './models/user.js';
 
 // routers
 import userAuthRouter from './routes/auth.routes.js';
+import userFilesRouter from "./routes/user.routes.js";
 
 const app = express()
 
@@ -25,6 +26,7 @@ app.use(cors({
 
 // routes
 app.use('/api', userAuthRouter);
+app.use('/api/user', userFilesRouter)
 
 // docker run -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=my-cloud-db -p 3306:3306 mysql
 sequelize.sync({force: true})
