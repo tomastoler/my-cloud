@@ -1,7 +1,7 @@
 {
   "name": "authenticated",
   "version": "1.0.0",
-  "description": "file server with user auth",
+  "description": "file-server with user auth",
   "main": "src/index.js",
   "type": "module",
   "scripts": {
@@ -9,7 +9,7 @@
     "dev": "nodemon src/index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Tomas Toler",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",

@@ -1,7 +1,6 @@
 import express from "express";
 import morgan from "morgan";
 import cors from 'cors';
-import cookieParser from "cookie-parser";
 import 'dotenv/config';
 
 // database 
@@ -18,7 +17,6 @@ app.set('port', process.env.PORT || 3000);
 
 // middlewares
 app.use(express.json());
-app.use(cookieParser());
 app.use(morgan('tiny'));
 app.use(cors({
     origin: '*'
