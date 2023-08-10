@@ -9,7 +9,7 @@ export const createUserFolder = (userID) => {
     userID += ''
     const userFolder = path.join(process.env.URL_FILE_STORAGE, userID);
     mkdir(userFolder, err => {
-        if (err) throw new Error('user folder already created');
+        if (err) return 'user folder already created';
         else return 'done';
     });
 }
