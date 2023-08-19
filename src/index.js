@@ -11,9 +11,9 @@ import './models/user.js';
 import userAuthRouter from './routes/auth.routes.js';
 import userFilesRouter from "./routes/user.routes.js";
 
-const app = express()
+const app = express();
 
-app.set('port', process.env.PORT || 3000);
+const PORT = process.env.PORT || 3000;
 
 // middlewares
 app.use(express.json());
@@ -30,8 +30,8 @@ app.use('/api/user', userFilesRouter)
 sequelize.sync({force: true})
     .then(() => {
         console.log('[MYSQL] DB is connected');
-        app.listen(app.get('port'), () => {
-            console.log('[LISTENING] Server on port', app.get('port'));
+        app.listen(PORT, () => {
+            console.log('[LISTENING] Server on port', PORT);
         });
     })
     .catch(error => {
